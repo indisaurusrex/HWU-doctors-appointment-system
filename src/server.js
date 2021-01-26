@@ -2,11 +2,14 @@ require("dotenv").config();
 import express from "express";
 import configViewEngine from "./config/viewEngine";
 import initWebRoutes from "./routes/web";
+import connectDB from "./config/connectDB"
 
 let app = express();
 
 //config view Engine
 configViewEngine(app);
+
+connectDB();
 
 //init all web routes
 initWebRoutes(app);
