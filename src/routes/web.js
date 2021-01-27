@@ -9,7 +9,7 @@ let router = express.Router();
 
 let initAllWebRoutes = (app) => {
     router.get("/", homepageController.getHomepage);
-
+    router.get("/new-user", homepageController.getNewUserPage);
     return app.use("/", router);
 };
 
