@@ -15,7 +15,7 @@ let createNewUser = (user) => {
             // return true if the email exists in db already
             let isEmailExist = await checkEmailUser(user);
             if (isEmailExist) {
-                resolve("flash message err");
+                reject(`The email ${user.email} already exists`);
             } else {
                 // hash the user password
                 let salt = bcrypt.genSaltSync(10);
