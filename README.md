@@ -12,3 +12,5 @@ run with `npm start` on local host 8080
 Using postgres db and sequelize for tables and migrations
 
 Using bcryptjs to hash the passwords
+
+Using Passportjs to handle login auth, using only the local server with passport-local for now, but this can be extended to use social media profiles as well
