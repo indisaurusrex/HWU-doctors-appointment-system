@@ -17,7 +17,9 @@ let initPassportLocal = () => {
             await loginService.findUserByEmail(email)
             // do they exist? 
             .then(async (user) => {
+                console.log("awaited loginservice")
                 if (!user) {
+                    console.log("user not found")
                     return done(null, false, req.flash("errors", "User not found"));
                 }
                 // compare the user password with input
@@ -28,8 +30,8 @@ let initPassportLocal = () => {
                     // return false with the error message
                     return done(null, false, req.flash("errors", message));
                 }
-            }).catch (err => {
-                return done(null, false, err);
+            }).catch (error => {
+                return done(null, false, erq.flash("errors", error));
             });
         } catch (error) {
             return done(null, false, error);
@@ -41,8 +43,8 @@ passport.serializeUser((user, done) => {
     return done(null, user.id);
 });
 
-passport.deserializeUser((id, done) => {
-    loginService.findUserById(id).then(user => {
+passport.deserializeUser(async (id, done) => {
+    await loginService.findUserById(id).then(user => {
         return done(null, user)
     }).catch(error => {
         return done(error, null);
