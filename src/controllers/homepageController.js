@@ -5,16 +5,6 @@ let getHomepage = (req, res) => {
     return res.render("homepage.ejs");
 };
 
-let getNewUserPage = (req, res) => {
-    return res.render("createUser.ejs")
-};
-
-let createNewUser = async (req, res) => {
-    let user = req.body;
-    await userService.createNewUser(user);
-    return res.redirect("/");
-};
-
 let getRegisterPage = (req, res) => {
     let form = {
         firstName: req.body.firstName,
@@ -78,11 +68,19 @@ let handleRegister = async (req, res) => {
     
 };
 
+let getAdminPage = (req, res) => {
+    return res.render("users/main.ejs");
+};
+
+let getAllUsersPage = (req, res) => {
+    return res.render("users/manageUsers.ejs");
+}
+
 module.exports = {
     getHomepage: getHomepage,
-    getNewUserPage: getNewUserPage,
-    createNewUser: createNewUser,
     getRegisterPage: getRegisterPage,
     getLoginPage: getLoginPage,
-    handleRegister: handleRegister
+    handleRegister: handleRegister,
+    getAdminPage: getAdminPage,
+    getAllUsersPage: getAllUsersPage
 };

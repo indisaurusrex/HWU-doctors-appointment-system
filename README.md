@@ -15,3 +15,7 @@ Using bcryptjs to hash the passwords
 
 Using Passportjs to handle login auth, using only the local server with passport-local for now, but this can be extended to use social media profiles as well http://www.passportjs.org/packages/passport-local/
 
+Styling the admin page using a customised version of AdminLTE from https://github.com/ColorlibHQ/AdminLTE/releases/tag/v3.0.5
+
+When migrating a table, navigate to the src folder before running the following: 
+`../node_modules/.bin/sequelize db:migrate`
