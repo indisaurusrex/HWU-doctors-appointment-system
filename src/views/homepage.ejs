@@ -15,18 +15,50 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
+<style>
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+<script>
+    $(document).mouseup(function(e) {
+        var container = $(".for-users");
+
+        // if the target of the click isn't the container nor a descendant 
+        // of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+        }
+    });
+
+    $(document).ready(function(e){
+        $("#logoIcon").on("click", function(e){
+            $(".for-users").css("display", "flex");
+            // $(".for-users").addClass("display", "flex");
+        });
+    })
+    
+</script>
 <body>
-    <div>
-        <form method="POST" action="/log-out">
-            <button>Log out</button>
-        </form>
-    </div>
+    
     <div class="container">
         <section class="header">
             <div class="top-nav">
                 <div class="logo">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars logo-icon" id="logoIcon"></i>
                     <img src="/images/logo-website.png" alt="logo-website">
+                    <div class="for-users">
+                        <a href="/login">Login</a>
+                        <a href="/users">Admin Page</a>
+                    </div>
                 </div>
                 <div class="intro">
                     <div class="intro-icon">
