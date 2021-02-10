@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events booking and creating</title>
+    <link rel="stylesheet" href="/css/bookingstyle.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav class="navbar">
+            <h1>Eventic</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#add-event">Add Event</a></li>
+            </ul>
+        </nav>
+        <div class="welcome-event"></div>
+    </header>
+    <main>
+        <div>
+            <div class="flash-message">
+                <% if (errors !=="" ) { %>
+                    <%errors.forEach((item)=> {%>
+                        <div class="alert-danger">
+                            <%- item%>
+                        </div>
+                        <%})%>
+                            <%}%>
+            </div>
+            <section id="events">
+                <h1 class="section-title">Events</h1>
+                <div class="events-container"></div>
+            </section>
+            <section id="add-event">
+                <h1 class="section-title">New Event</h1>
+                <form class="form">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="number" id="attendee" placeholder="Attendees">
+                    <textarea id="description" id="" cols="30" rows="10" placeholder="Description..."></textarea>
+                    <select id="status">
+                        <option value="0">Free</option>
+                        <option value="1">Paid</option>
+                    </select>
+                    <button class="btn btn-primary">Save</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCyTjmAGUz51qWKEU0-q4FyQG0a9AialVE",
+            authDomain: "doctorcare-26516.firebaseapp.com",
+            projectId: "doctorcare-26516",
+            storageBucket: "doctorcare-26516.appspot.com",
+            messagingSenderId: "989516465453",
+            appId: "1:989516465453:web:d03eec3939b66997ad3fa4"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
