@@ -22,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     gender: DataTypes.BOOLEAN,
     description: DataTypes.TEXT,
     address: DataTypes.STRING,
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE,
-    deletedAt: DataTypes.DATE
+    createdAt: DataTypes.TIMESTAMP,
+    updatedAt: DataTypes.TIMESTAMP,
+    deletedAt: DataTypes.TIMESTAMP
   }, {
     sequelize,
     modelName: 'User',
