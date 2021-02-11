@@ -26,7 +26,19 @@ let getUsers = () => {
     }));
 };
 
+let getDesks = () => {
+    return new Promise((async (resolve, reject) => {
+        try {
+            let desks = await db.Desk.findAll();
+            resolve(desks);
+        } catch (e) {
+            reject(e);
+        }
+    }));
+};
+
 module.exports = {
     getBookings: getBookings,
-    getUsers: getUsers
+    getUsers: getUsers,
+    getDesks: getDesks
 };

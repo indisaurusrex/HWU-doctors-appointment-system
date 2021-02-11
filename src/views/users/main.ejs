@@ -146,10 +146,14 @@
                                         </thead>
                                         <tbody>
                                             <% bookings.forEach(function(booking) { %>
-                                                
                                             <tr>
                                                 <td><%= booking.id %></td>
-                                                <td><%= booking.deskid %></td>
+                                                <td>
+                                                    <% desks.forEach(function(desk) { %>
+                                                        <% if (desk.id===booking.deskid) {%>
+                                                            <%= desk.name %>
+                                                                <% }}) %>
+                                                </td>
                                                 <td><% users.forEach(function(user) { %>
                                                     <% if (user.id === booking.userid) {%>
                                                     <%= user.firstName %>

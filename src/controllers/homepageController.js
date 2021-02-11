@@ -73,9 +73,11 @@ let getAdminPage = async (req, res) => {
     try {
         let bookings = await homeService.getBookings();
         let users = await homeService.getUsers();
+        let desks = await homeService.getDesks();
         return res.render("users/main.ejs", {
             bookings: bookings,
-            users: users
+            users: users,
+            desks: desks
         });
     } catch (error) {
         console.log(error);
