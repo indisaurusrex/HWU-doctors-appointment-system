@@ -1,4 +1,5 @@
 import userService from "../services/userService";
+import homeService from "../services/homeService";
 import { validationResult } from "express-validator";
 
 let getHomepage = (req, res) => {
@@ -68,8 +69,18 @@ let handleRegister = async (req, res) => {
     
 };
 
-let getAdminPage = (req, res) => {
-    return res.render("users/main.ejs");
+let getAdminPage = async (req, res) => {
+    try {
+        let bookings = await homeService.getBookings();
+        let users = await homeService.getUsers();
+        return res.render("users/main.ejs", {
+            bookings: bookings,
+            users: users
+        });
+    } catch (error) {
+        console.log(error);
+    }
+    // return res.render("users/main.ejs");
 };
 
 let getAllUsersPage = (req, res) => {
