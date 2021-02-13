@@ -1,16 +1,9 @@
 import userService from "../services/userService";
 import homeService from "../services/homeService";
 import { validationResult } from "express-validator";
-import Calendar from 'react-calendar';
-import React from 'react';
-import ReactDOM from 'react';
+
 
 let getHomepage = (req, res) => {
-    // ReactDOM.render(
-    //     <Calendar />,
-    //     document.getElementById('calendar')
-    // );
-    
     return res.render("homepage.ejs");
 };
 
@@ -97,11 +90,23 @@ let getAllUsersPage = (req, res) => {
     return res.render("users/manageUsers.ejs");
 }
 
+let getAllSpacesPage = async (req, res) => {
+    try {
+        let desks = await homeService.getDesks();
+        return res.render("spacesview.ejs", {
+            desks: desks
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 module.exports = {
     getHomepage: getHomepage,
     getRegisterPage: getRegisterPage,
     getLoginPage: getLoginPage,
     handleRegister: handleRegister,
     getAdminPage: getAdminPage,
-    getAllUsersPage: getAllUsersPage
+    getAllUsersPage: getAllUsersPage,
+    getAllSpacesPage: getAllSpacesPage
 };

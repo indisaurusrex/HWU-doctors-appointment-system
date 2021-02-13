@@ -20,7 +20,7 @@ let initAllWebRoutes = (app) => {
     router.get("/login", authController.checkLoggedOut, homepageController.getLoginPage);
     router.get("/users", authController.checkLoggedIn, homepageController.getAdminPage);
     router.get("/all-users", authController.checkLoggedIn, homepageController.getAllUsersPage);
-
+    router.get("/all-spaces", homepageController.getAllSpacesPage);
 
     
     router.post("/register", auth.validateRegister, homepageController.handleRegister);

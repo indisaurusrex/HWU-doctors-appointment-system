@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <!-- Load font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/spaces.css">
+
+    <!-- Load Jquery, Slick slider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/slick-slide.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+</head>
+
+<style>
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <section class="header">
+            <div class="top-nav">
+                <div class="logo">
+                    <i class="fas fa-bars logo-icon" id="logoIcon"></i>
+                    <p> ..... </p><a href="/login">Login</a>
+                    <p> .....</p><a href="/users">Admin Page</a>
+                </div>
+                <div class="intro">
+                    <div class="intro-icon">
+                        <h3 class="title">Areas</h3>
+                        <span>little </span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">To be</h3>
+                        <span>smalls</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Filled</h3>
+                        <span>something or other</span>
+                    </div>
+                    <div class="intro-icon">
+                        <h3 class="title">Later</h3>
+                        <span>little bits of info</span>
+                    </div>
+
+                </div>
+                <div class="support">
+                    <span><i class="fas fa-question-circle"></i>To be a button</span>
+                </div>
+            </div>
+
+            <div class="image-nav">
+                <div class="title-image">
+                    Spaces you can rent at the underground
+                </div>
+            </div>
+        </section>
+        <section class="space-grid">
+            <div>
+                <div class="wrapper">
+                    <h1>
+                        Our delightful spaces</h1>
+                    <div class="img-area">
+                        <% desks.forEach(function(desk) { %>
+                            <div class="single-img">
+                                <img src="https://i.imgur.com/ol2AqPR.png" alt="empty space photo">
+                                <p>
+                                    <%= desk.name %>
+                                </p>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="doctors">
+           
+        </section>
+        <section class="handbook">
+            
+        </section>
+        <footer>
+            <span> Hackney Wick Underground</span>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
