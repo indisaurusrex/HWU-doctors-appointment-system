@@ -1,8 +1,16 @@
 import userService from "../services/userService";
 import homeService from "../services/homeService";
 import { validationResult } from "express-validator";
+import Calendar from 'react-calendar';
+import React from 'react';
+import ReactDOM from 'react';
 
 let getHomepage = (req, res) => {
+    // ReactDOM.render(
+    //     <Calendar />,
+    //     document.getElementById('calendar')
+    // );
+    
     return res.render("homepage.ejs");
 };
 

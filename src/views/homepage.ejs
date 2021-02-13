@@ -13,6 +13,10 @@
     <script src="/js/slick-slide.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <style>
@@ -48,7 +52,21 @@
     
 </script>
 <body>
-    
+    <!-- <div id="root"></div>
+    <script type="text/babel">
+
+        ReactDOM.render(
+            
+            <button onClick={() => this.setState({ liked: true })}>
+                Like
+            </button>,
+            document.getElementById('root')
+        );
+
+    </script> -->
+    <div id="like_button_container"></div>
+    <div id="medium_blog_container"></div>
+
     <div class="container">
         <section class="header">
             <div class="top-nav">
@@ -98,10 +116,12 @@
         </section>
         <section class="calendar-of-desks">
             <div>
-
+                <div id="calendar"></div>
+                <!-- <div id="like_button_container"></div> -->
             </div>
         </section>
 
+        
         <section class="doctors">
             <div class="title-section">
                 <span class="span-title">Outstanding doctor</span>
@@ -204,6 +224,12 @@
             <span> Hackney Wick Underground</span>
         </footer>
     </div>
+    
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="like_button.js"></script>
 </body>
 
 </html>
