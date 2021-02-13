@@ -93,8 +93,19 @@ let getAllUsersPage = (req, res) => {
 let getAllSpacesPage = async (req, res) => {
     try {
         let desks = await homeService.getDesks();
-        return res.render("spacesview.ejs", {
+        return res.render("spaces/spacesview.ejs", {
             desks: desks
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+let getSpaceById = async (req, res) => {
+    try {
+        let desk = await homeService.findSpaceById(req.params.id);
+        return res.render("spaces/singlespace.ejs", {
+            desk: desk
         });
     } catch (error) {
         console.log(error);
@@ -108,5 +119,6 @@ module.exports = {
     handleRegister: handleRegister,
     getAdminPage: getAdminPage,
     getAllUsersPage: getAllUsersPage,
-    getAllSpacesPage: getAllSpacesPage
+    getAllSpacesPage: getAllSpacesPage,
+    getSpaceById: getSpaceById
 };

@@ -3,35 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Space page</title>
     <!-- Load font awesome 5-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
     <link rel="stylesheet" href="/css/spaces.css">
-
-    <!-- Load Jquery, Slick slider-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js/slick-slide.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
 </head>
-
-<style>
-    .for-users {
-        border-radius: 3px;
-        position: absolute;
-        border: 1px solid #d8d8d8;
-        background-color: #d8d8d8;
-        display: flex;
-        flex-direction: column;
-        top: 60px;
-        padding: 5px;
-        display: none;
-    }
-</style>
 
 <body>
 
@@ -69,36 +47,23 @@
 
             <div class="image-nav">
                 <div class="title-image">
-                    Spaces you can rent at the underground
+                    <%= desk.name %>
+                    <%= desk.location %>
                 </div>
             </div>
         </section>
-        <section class="space-grid">
-            <div>
-                <div class="wrapper">
-                    <h1>
-                        Our delightful spaces</h1>
-                    <div class="img-area">
-                        <% desks.forEach(function(desk) { %>
-                            <div class="single-img">
-                                <img src="https://i.imgur.com/ol2AqPR.png" alt="empty space photo">
-                                <p>
-                                    <%= desk.name %>
-                                </p>
-                            </div>
-                            <% }) %>
-                    </div>
-                </div>
-
-            </div>
+        <section id="book-space-form">
+            <h2>fill in info from user sign up</h2>
+            <h3>show available month</h3>
+            <h3>this space is available from now until date</h3>
+            <h3>how long would you like to rent it for?</h3>
+            <input type="text" placeholder="Tell us about what you'll use the space for">
         </section>
 
 
-        <section class="doctors">
-           
-        </section>
-        <section class="handbook">
-            
+
+        <section class="">
+
         </section>
         <footer>
             <span> Hackney Wick Underground</span>

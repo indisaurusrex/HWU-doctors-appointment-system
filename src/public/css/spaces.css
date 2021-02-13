@@ -21,3 +21,13 @@ transition: .9s;
 img{
     width: 200px;
 }
+.btn-view 
+{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end; 
+    color: black;
+}
+.btn-view:hover{
+    opacity: .5;
+}
