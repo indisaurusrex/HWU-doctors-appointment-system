@@ -1,5 +1,7 @@
 import userService from "../services/userService";
+import homeService from "../services/homeService";
 import { validationResult } from "express-validator";
+
 
 let getHomepage = (req, res) => {
     return res.render("homepage.ejs");
@@ -68,12 +70,46 @@ let handleRegister = async (req, res) => {
     
 };
 
-let getAdminPage = (req, res) => {
-    return res.render("users/main.ejs");
+let getAdminPage = async (req, res) => {
+    try {
+        let bookings = await homeService.getBookings();
+        let users = await homeService.getUsers();
+        let desks = await homeService.getDesks();
+        return res.render("users/main.ejs", {
+            bookings: bookings,
+            users: users,
+            desks: desks
+        });
+    } catch (error) {
+        console.log(error);
+    }
+    // return res.render("users/main.ejs");
 };
 
 let getAllUsersPage = (req, res) => {
     return res.render("users/manageUsers.ejs");
+}
+
+let getAllSpacesPage = async (req, res) => {
+    try {
+        let desks = await homeService.getDesks();
+        return res.render("spaces/spacesview.ejs", {
+            desks: desks
+        });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+let getSpaceById = async (req, res) => {
+    try {
+        let desk = await homeService.findSpaceById(req.params.id);
+        return res.render("spaces/singlespace.ejs", {
+            desk: desk
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 module.exports = {
@@ -82,5 +118,7 @@ module.exports = {
     getLoginPage: getLoginPage,
     handleRegister: handleRegister,
     getAdminPage: getAdminPage,
-    getAllUsersPage: getAllUsersPage
+    getAllUsersPage: getAllUsersPage,
+    getAllSpacesPage: getAllSpacesPage,
+    getSpaceById: getSpaceById
 };

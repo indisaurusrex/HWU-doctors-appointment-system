@@ -17,7 +17,6 @@ let initPassportLocal = () => {
             await loginService.findUserByEmail(email)
             // do they exist? 
             .then(async (user) => {
-                console.log("awaited loginservice")
                 if (!user) {
                     console.log("user not found")
                     return done(null, false, req.flash("errors", "User not found"));
@@ -25,6 +24,7 @@ let initPassportLocal = () => {
                 // compare the user password with input
                 let message = await loginService.comparePassword(password, user);
                 if (message === true) {
+                    console.log("everythign is good here");
                     return done(null, user, null);
                 } else {
                     // return false with the error message
