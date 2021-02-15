@@ -22,7 +22,7 @@ let initAllWebRoutes = (app) => {
     router.get("/all-users", authController.checkLoggedIn, homepageController.getAllUsersPage);
     // router.get("/all-spaces", homepageController.getAllSpacesPage);
     // router.get("/all-spaces/:id", homepageController.getSpaceById);
-    router.get("/hire-enquiry", homepageController.getHireEnquiryPage);
+    router.get("/hire-enquiry", authController.checkLoggedIn, homepageController.getHireEnquiryPage);
     router.get("/about-us", homepageController.getAboutUs);
 
     
