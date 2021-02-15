@@ -227,6 +227,14 @@ transition: .9s;
     font-style: italic;
     font-size: larger;
 }
+.main-text {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+.main-text ul {
+    padding-bottom: 30px;
+}
 blockquote {
     padding: 30px;
 }
