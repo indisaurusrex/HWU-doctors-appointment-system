@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-.red {
-  border: 1px solid red; }
-
-.green {
-  border: 1px solid green; }
-
 body {
   padding: 0;
   margin: 0;
@@ -54,81 +48,91 @@ transition: .9s;
   margin: 0 20px; }
 
 .header {
-  height: 300px;
-  border-bottom: 2px solid #ccc; }
-
-  .header .image-nav {
-    height: 50px;
-    margin: 0 -20px;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100px;}
+  .header .title {
+      height: 50px;
+      font-size: 35px;
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+ 
+.homepage-feature {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .header .image-nav .title-image {
-      font-size: 35px;
-      margin: 40px 0; }
- 
+    align-items: center;
+}
+.homepage-feature .placeholder {
+    width: 60%;
+    height: 500px;
+    border-radius: 3px;
+    border-style: groove;
+    border-color: gray;
+    padding: 30px;
+}
 
-.popular-specialty, .hospital-and-clinic, .doctors, .handbook {
+
+
+
+.doctors, .handbook {
   height: 400px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  border-bottom: 2px solid #ccc; }
-  .popular-specialty .title-section, .hospital-and-clinic .title-section, .doctors .title-section, .handbook .title-section {
+  flex-direction: column;}
+  .doctors .title-section, .handbook .title-section {
     width: 100%;
     height: 100px;
     padding-top: 10px;
     margin-top: 20px;
     display: flex;
     flex-direction: row; }
-    .popular-specialty .title-section .span-title, .hospital-and-clinic .title-section .span-title, .doctors .title-section .span-title, .handbook .title-section .span-title {
+    .doctors .title-section .span-title, .handbook .title-section .span-title {
       width: 20%;
       display: block;
       font-size: 20px;
       font-weight: 600; }
-    .popular-specialty .title-section .btn-view, .hospital-and-clinic .title-section .btn-view, .doctors .title-section .btn-view, .handbook .title-section .btn-view {
+    .doctors .title-section .btn-view, .handbook .title-section .btn-view {
       width: 80%;
       display: flex;
       justify-content: flex-end; }
-      .popular-specialty .title-section .btn-view a, .hospital-and-clinic .title-section .btn-view a, .doctors .title-section .btn-view a, .handbook .title-section .btn-view a {
+      .doctors .title-section .btn-view a, .handbook .title-section .btn-view a {
         border: 1px solid #ccc;
         background-color: #ccc;
         height: fit-content;
         padding: 10px; }
-        .popular-specialty .title-section .btn-view a:hover, .hospital-and-clinic .title-section .btn-view a:hover, .doctors .title-section .btn-view a:hover, .handbook .title-section .btn-view a:hover {
+        .doctors .title-section .btn-view a:hover, .handbook .title-section .btn-view a:hover {
           border: 1px solid #f7d800;
           background-color: #f7d800; }
-        .popular-specialty .title-section .btn-view a span, .hospital-and-clinic .title-section .btn-view a span, .doctors .title-section .btn-view a span, .handbook .title-section .btn-view a span {
+        .doctors .title-section .btn-view a span, .handbook .title-section .btn-view a span {
           width: 100%;
           padding: 5px;
           color: black; }
-          .popular-specialty .title-section .btn-view a span:hover, .hospital-and-clinic .title-section .btn-view a span:hover, .doctors .title-section .btn-view a span:hover, .handbook .title-section .btn-view a span:hover {
+          .doctors .title-section .btn-view a span:hover, .handbook .title-section .btn-view a span:hover {
             color: white; }
-  .popular-specialty .slide, .hospital-and-clinic .slide, .doctors .slide, .handbook .slide {
+  .doctors .slide, .handbook .slide {
     height: 300px; }
-    .popular-specialty .slide .my-slick-slide, .hospital-and-clinic .slide .my-slick-slide, .doctors .slide .my-slick-slide, .handbook .slide .my-slick-slide {
+    .doctors .slide .my-slick-slide, .handbook .slide .my-slick-slide {
       height: 100%;
       width: 100%; }
-      .popular-specialty .slide .my-slick-slide .div-slide, .hospital-and-clinic .slide .my-slick-slide .div-slide, .doctors .slide .my-slick-slide .div-slide, .handbook .slide .my-slick-slide .div-slide {
+      .doctors .slide .my-slick-slide .div-slide, .handbook .slide .my-slick-slide .div-slide {
         display: flex;
         flex-direction: column;
         padding-right: 10px; }
-        .popular-specialty .slide .my-slick-slide .div-slide .image-slide, .hospital-and-clinic .slide .my-slick-slide .div-slide .image-slide, .doctors .slide .my-slick-slide .div-slide .image-slide, .handbook .slide .my-slick-slide .div-slide .image-slide {
+        .doctors .slide .my-slick-slide .div-slide .image-slide, .handbook .slide .my-slick-slide .div-slide .image-slide {
           height: 200px;
           background-image: url("../images/speciality/speciality1.jpg");
           background-position: center center;
           background-repeat: no-repeat;
           background-size: 325px 200px; }
-        .popular-specialty .slide .my-slick-slide .div-slide .div-title, .hospital-and-clinic .slide .my-slick-slide .div-slide .div-title, .doctors .slide .my-slick-slide .div-slide .div-title, .handbook .slide .my-slick-slide .div-slide .div-title {
+        .doctors .slide .my-slick-slide .div-slide .div-title, .handbook .slide .my-slick-slide .div-slide .div-title {
           background-color: #f5efef; }
-          .popular-specialty .slide .my-slick-slide .div-slide .div-title span, .hospital-and-clinic .slide .my-slick-slide .div-slide .div-title span, .doctors .slide .my-slick-slide .div-slide .div-title span, .handbook .slide .my-slick-slide .div-slide .div-title span {
+          .doctors .slide .my-slick-slide .div-slide .div-title span, .handbook .slide .my-slick-slide .div-slide .div-title span {
             display: block;
             text-transform: uppercase;
             font-size: 20px;
             padding: 15px; }
-    .popular-specialty .slide .arrow-left, .hospital-and-clinic .slide .arrow-left, .doctors .slide .arrow-left, .handbook .slide .arrow-left {
+    .doctors .slide .arrow-left, .handbook .slide .arrow-left {
       border: 1px solid #ccc;
       font-size: 30px;
       padding: 15px;
@@ -139,7 +143,7 @@ transition: .9s;
       background-color: white;
       z-index: 1000;
       cursor: pointer; }
-    .popular-specialty .slide .arrow-right, .hospital-and-clinic .slide .arrow-right, .doctors .slide .arrow-right, .handbook .slide .arrow-right {
+    .doctors .slide .arrow-right, .handbook .slide .arrow-right {
       border: 1px solid #ccc;
       font-size: 30px;
       padding: 15px;
