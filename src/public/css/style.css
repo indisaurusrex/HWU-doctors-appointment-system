@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
   background: url('../images/birchplywood.jpg');
+  background-color: tan;
   width: 100%;
   background-repeat: repeat-y;
   font-family: 'Poppins', sans-serif; }
