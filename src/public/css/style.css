@@ -72,67 +72,64 @@ transition: .9s;
     padding: 30px;
 }
 
-
-
-
-.doctors, .handbook {
-  height: 400px;
+.events {
+  height: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;}
-  .doctors .title-section, .handbook .title-section {
+  .events .title-section {
     width: 100%;
     height: 100px;
     padding-top: 10px;
     margin-top: 20px;
     display: flex;
     flex-direction: row; }
-    .doctors .title-section .span-title, .handbook .title-section .span-title {
+    .events .title-section .span-title {
       width: 20%;
       display: block;
       font-size: 20px;
       font-weight: 600; }
-    .doctors .title-section .btn-view, .handbook .title-section .btn-view {
+    .events .title-section .btn-view {
       width: 80%;
       display: flex;
       justify-content: flex-end; }
-      .doctors .title-section .btn-view a, .handbook .title-section .btn-view a {
+      .events .title-section .btn-view a {
         border: 1px solid #ccc;
         background-color: #ccc;
         height: fit-content;
         padding: 10px; }
-        .doctors .title-section .btn-view a:hover, .handbook .title-section .btn-view a:hover {
+        .events .title-section .btn-view a:hover {
           border: 1px solid #f7d800;
           background-color: #f7d800; }
-        .doctors .title-section .btn-view a span, .handbook .title-section .btn-view a span {
+        .events .title-section .btn-view a span {
           width: 100%;
           padding: 5px;
           color: black; }
-          .doctors .title-section .btn-view a span:hover, .handbook .title-section .btn-view a span:hover {
+          .events .title-section .btn-view a span:hover {
             color: white; }
-  .doctors .slide, .handbook .slide {
+  .events .slide {
     height: 300px; }
-    .doctors .slide .my-slick-slide, .handbook .slide .my-slick-slide {
+    .events .slide .my-slick-slide {
       height: 100%;
       width: 100%; }
-      .doctors .slide .my-slick-slide .div-slide, .handbook .slide .my-slick-slide .div-slide {
+      .events .slide .my-slick-slide .div-slide {
         display: flex;
         flex-direction: column;
         padding-right: 10px; }
-        .doctors .slide .my-slick-slide .div-slide .image-slide, .handbook .slide .my-slick-slide .div-slide .image-slide {
+        .events .slide .my-slick-slide .div-slide .image-slide {
           height: 200px;
           background-image: url("../images/speciality/speciality1.jpg");
           background-position: center center;
           background-repeat: no-repeat;
           background-size: 325px 200px; }
-        .doctors .slide .my-slick-slide .div-slide .div-title, .handbook .slide .my-slick-slide .div-slide .div-title {
+        .events .slide .my-slick-slide .div-slide .div-title {
           background-color: #f5efef; }
-          .doctors .slide .my-slick-slide .div-slide .div-title span, .handbook .slide .my-slick-slide .div-slide .div-title span {
+          .events .slide .my-slick-slide .div-slide .div-title span {
             display: block;
             text-transform: uppercase;
             font-size: 20px;
             padding: 15px; }
-    .doctors .slide .arrow-left, .handbook .slide .arrow-left {
+    .events .slide .arrow-left {
       border: 1px solid #ccc;
       font-size: 30px;
       padding: 15px;
@@ -143,7 +140,7 @@ transition: .9s;
       background-color: white;
       z-index: 1000;
       cursor: pointer; }
-    .doctors .slide .arrow-right, .handbook .slide .arrow-right {
+    .events .slide .arrow-right {
       border: 1px solid #ccc;
       font-size: 30px;
       padding: 15px;
@@ -154,55 +151,36 @@ transition: .9s;
       background-color: white;
       cursor: pointer; }
 
-.doctors .slide .my-slick-slide .div-slide {
+.events .slide .my-slick-slide .div-slide {
   display: flex;
   flex-direction: column;
   background-color: #e8e8e8;
   margin-right: 10px;
   cursor: pointer; }
-  .doctors .slide .my-slick-slide .div-slide:hover {
+  .events .slide .my-slick-slide .div-slide:hover {
     background-color: #f1ee90; }
-  .doctors .slide .my-slick-slide .div-slide img {
+  .events .slide .my-slick-slide .div-slide img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     margin: 0 auto;
     padding: 10px 0; }
-  .doctors .slide .my-slick-slide .div-slide .info-doctor {
+  .events .slide .my-slick-slide .div-slide .info-doctor {
     text-align: center; }
-    .doctors .slide .my-slick-slide .div-slide .info-doctor .name {
+    .events .slide .my-slick-slide .div-slide .info-doctor .title {
       display: block;
       font-weight: 600;
       padding-top: 5px; }
-    .doctors .slide .my-slick-slide .div-slide .info-doctor .speciality {
+    .events .slide .my-slick-slide .div-slide .info-doctor .short-desc {
       display: block;
       padding-top: 5px; }
-  .doctors .slide .my-slick-slide .div-slide .count-booking {
+  .events .slide .my-slick-slide .div-slide .location {
     text-align: center;
     color: #59c1a9;
     margin-top: 30px;
     margin-bottom: 5px; }
 
-.handbook .slide {
-  height: 300px; }
-  .handbook .slide .handbook-slide {
-    height: 100%;
-    width: 100%; }
-    .handbook .slide .handbook-slide .div-slide {
-      display: flex;
-      flex-direction: row;
-      margin-right: 10px; }
-      .handbook .slide .handbook-slide .div-slide img {
-        height: 200px;
-        width: 300px; }
-      .handbook .slide .handbook-slide .div-slide .info-post {
-        padding: 5px;
-        display: flex;
-        flex-direction: column; }
-        .handbook .slide .handbook-slide .div-slide .info-post .title-post {
-          font-weight: 600; }
-        .handbook .slide .handbook-slide .div-slide .info-post .summary-content {
-          margin-top: 15px; }
+
 
 .contact {
   height: 400px;
@@ -241,6 +219,21 @@ transition: .9s;
     width: 50%;
     margin: auto; }
 
+.about-us {
+    margin: auto;
+}
+    .about-us .quote {
+    background: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    font-size: larger;
+}
+blockquote {
+    padding: 30px;
+}
+.no-italics {
+    font-style: normal;
+    font-size: smaller;
+}
 footer {
   margin: 0 -20px;
   height: 50px;
