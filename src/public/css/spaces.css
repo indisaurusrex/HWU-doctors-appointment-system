@@ -31,3 +31,9 @@ img{
 .btn-view:hover{
     opacity: .5;
 }
+
+.space-hire-text {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+}

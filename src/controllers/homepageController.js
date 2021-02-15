@@ -90,27 +90,31 @@ let getAllUsersPage = (req, res) => {
     return res.render("users/manageUsers.ejs");
 }
 
-let getAllSpacesPage = async (req, res) => {
-    try {
-        let desks = await homeService.getDesks();
-        return res.render("spaces/spacesview.ejs", {
-            desks: desks
-        });
-    } catch (error) {
-        console.log(error);
-    }
+// let getAllSpacesPage = async (req, res) => {
+//     try {
+//         let desks = await homeService.getDesks();
+//         return res.render("spaces/spacesview.ejs", {
+//             desks: desks
+//         });
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+let getHireEnquiryPage = (req, res) => {
+    return res.render("spaces/singlespace.ejs");
 }
 
-let getSpaceById = async (req, res) => {
-    try {
-        let desk = await homeService.findSpaceById(req.params.id);
-        return res.render("spaces/singlespace.ejs", {
-            desk: desk
-        });
-    } catch (error) {
-        console.log(error);
-    }
-}
+// let getSpaceById = async (req, res) => {
+//     try {
+//         let desk = await homeService.findSpaceById(req.params.id);
+//         return res.render("spaces/singlespace.ejs", {
+//             desk: desk
+//         });
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 let getAboutUs = (req, res) => {
     return res.render("about-us.ejs");
@@ -123,7 +127,8 @@ module.exports = {
     handleRegister: handleRegister,
     getAdminPage: getAdminPage,
     getAllUsersPage: getAllUsersPage,
-    getAllSpacesPage: getAllSpacesPage,
-    getSpaceById: getSpaceById,
-    getAboutUs: getAboutUs
+    // getAllSpacesPage: getAllSpacesPage,
+    // getSpaceById: getSpaceById,
+    getAboutUs: getAboutUs,
+    getHireEnquiryPage: getHireEnquiryPage
 };

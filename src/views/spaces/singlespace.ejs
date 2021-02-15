@@ -3,53 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Space page</title>
+    <title>Enquire about studio hire</title>
     <!-- Load font awesome 5-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
     <link rel="stylesheet" href="/css/spaces.css">
+    <!-- Load Jquery, Slick slider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/slick-slide.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
 
     <div class="container">
+        <%- include('../sections/topnav.ejs') %>
+
         <section class="header">
-            <div class="top-nav">
-                <div class="logo">
-                    <i class="fas fa-bars logo-icon" id="logoIcon"></i>
-                    <p> ..... </p><a href="/login">Login</a>
-                    <p> .....</p><a href="/users">Admin Page</a>
-                </div>
-                <div class="intro">
-                    <div class="intro-icon">
-                        <h3 class="title">Areas</h3>
-                        <span>little </span>
-                    </div>
-                    <div class="intro-icon">
-                        <h3 class="title">To be</h3>
-                        <span>smalls</span>
-                    </div>
-                    <div class="intro-icon">
-                        <h3 class="title">Filled</h3>
-                        <span>something or other</span>
-                    </div>
-                    <div class="intro-icon">
-                        <h3 class="title">Later</h3>
-                        <span>little bits of info</span>
-                    </div>
-
-                </div>
-                <div class="support">
-                    <span><i class="fas fa-question-circle"></i>To be a button</span>
-                </div>
+            <div class="title">
+                Thinking of hiring a space at the underground?
             </div>
-
-            <div class="image-nav">
-                <div class="title-image">
-                    <strong><%= desk.name %></strong> in <%= desk.location %>
-                </div>
-            </div>
+        </section>
+        <section class="space-hire-text">
+            <p>
+                Let us know a bit more about you, your practice, and what you need from your space in the boxes below. 
+            </p>
+            <p>
+                We'll let you know which spaces might suit your needs and confirm your booking via email.
+            </p>
         </section>
         <section id="book-space-form">
             <h2>fill in info from user sign up</h2>
@@ -61,7 +44,8 @@
 
 
 
-        
+
+        <%- include('../sections/whatson.ejs') %>
         <footer>
             <span> Hackney Wick Underground</span>
         </footer>
