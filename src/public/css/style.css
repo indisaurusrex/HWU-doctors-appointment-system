@@ -16,50 +16,47 @@ body {
   body a {
     text-decoration: none; }
   
+.top-nav .wrapper h1 {
+text-align: center;
+font-size: 30px;
+font-family: 'Poppins';
+text-transform: uppercase;
+}
+.top-nav .img-area {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.top-nav .single-img{
+padding:0 20px 20px;
+}
+.top-nav img:hover{
+opacity: .5;
+transition: .9s;
+}
+.top-nav img{
+    width: 200px;
+}
+.top-nav .btn-view 
+{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end; 
+    color: black;
+}
+.top-nav .btn-view:hover{
+    opacity: .5;
+}
 
 .container {
   margin: 0 20px; }
 
 .header {
-  height: 600px;
+  height: 300px;
   border-bottom: 2px solid #ccc; }
-  .header .top-nav {
-    height: 100px;
-    display: flex;
-    flex-direction: row; }
-    .header .top-nav .logo {
-      width: 20%;
-      display: flex;
-      flex-direction: row;
-      margin-top: 20px; }
-      .header .top-nav .logo img {
-        margin-left: 10px;
-        height: 50%; }
-      .header .top-nav .logo i {
-        margin-top: 5px;
-        font-size: 28px;
-        opacity: 0.5; }
-    .header .top-nav .intro {
-      width: 60%;
-      display: flex;
-      flex-direction: row; }
-      .header .top-nav .intro .intro-icon {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px; }
-        .header .top-nav .intro .intro-icon h3 {
-          margin: 0;
-          font-size: 15px; }
-        .header .top-nav .intro .intro-icon span {
-          padding-top: 5px;
-          font-size: 12px;
-          display: block; }
-    .header .top-nav .support {
-      width: 20%;
-      padding-top: 25px; }
-      .header .top-nav .support i {
-        padding-right: 5px; }
+
   .header .image-nav {
     height: 50px;
     margin: 0 -20px;
@@ -71,35 +68,7 @@ body {
     .header .image-nav .title-image {
       font-size: 35px;
       margin: 40px 0; }
-    .header .image-nav .btn-search {
-      border-radius: 25px;
-      padding: 10px;
-      background-color: #f7d800;
-      display: flex;
-      flex-direction: row;
-      width: 40%; }
-      .header .image-nav .btn-search .input-search {
-        width: 100%;
-        border: none;
-        outline: none;
-        background-color: #f7d800;
-        padding-left: 10px; }
-  .header .bottom-nav {
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    width: 100%; }
-    .header .bottom-nav .bottom-item {
-      display: flex;
-      flex-direction: column;
-      width: 25%;
-      justify-content: center;
-      align-items: center; }
-      .header .bottom-nav .bottom-item span {
-        padding-top: 5px;
-        display: block; }
-      .header .bottom-nav .bottom-item i {
-        color: #59c1a9; }
+ 
 
 .popular-specialty, .hospital-and-clinic, .doctors, .handbook {
   height: 400px;
