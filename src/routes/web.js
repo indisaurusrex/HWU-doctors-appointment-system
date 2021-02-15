@@ -22,6 +22,7 @@ let initAllWebRoutes = (app) => {
     router.get("/all-users", authController.checkLoggedIn, homepageController.getAllUsersPage);
     router.get("/all-spaces", homepageController.getAllSpacesPage);
     router.get("/all-spaces/:id", homepageController.getSpaceById);
+    router.get("/about-us", homepageController.getAboutUs);
 
     
     router.post("/register", auth.validateRegister, homepageController.handleRegister);

@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    
 </head>
 
 <style>
@@ -30,25 +29,7 @@
         display: none;
     }
 </style>
-<script>
-    $(document).mouseup(function(e) {
-        var container = $(".for-users");
 
-        // if the target of the click isn't the container nor a descendant 
-        // of the container
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            container.hide();
-        }
-    });
-
-    $(document).ready(function(e){
-        $("#logoIcon").on("click", function(e){
-            $(".for-users").css("display", "flex");
-            // $(".for-users").addClass("display", "flex");
-        });
-    })
-    
-</script>
 <body>
     <div class="container">
         <%- include('sections/topnav.ejs') %>
@@ -63,7 +44,6 @@
             </div>
         </section>
 
-        
         <section class="doctors">
             <div class="title-section">
                 <span class="span-title">Spaces to rent</span>

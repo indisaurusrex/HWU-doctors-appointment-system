@@ -112,6 +112,10 @@ let getSpaceById = async (req, res) => {
     }
 }
 
+let getAboutUs = (req, res) => {
+    return res.render("about-us.ejs");
+}
+
 module.exports = {
     getHomepage: getHomepage,
     getRegisterPage: getRegisterPage,
@@ -120,5 +124,6 @@ module.exports = {
     getAdminPage: getAdminPage,
     getAllUsersPage: getAllUsersPage,
     getAllSpacesPage: getAllSpacesPage,
-    getSpaceById: getSpaceById
+    getSpaceById: getSpaceById,
+    getAboutUs: getAboutUs
 };
