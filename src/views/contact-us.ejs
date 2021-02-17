@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    <!-- Load font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/css/spaces.css">
+    <!-- Load Jquery, Slick slider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/slick-slide.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <%- include('./sections/topnav.ejs') %>
+
+            <section class="header">
+                <div class="title">
+                    Want to find out more? Ask us anything you like!
+                </div>
+            </section>
+            <section class="space-hire-text">
+                <p>
+                    We are open for questions about what possibilities could be achieved...
+                </p>
+                <p>
+                    Fill in the form below and we'll get back to you as soon as we can.
+                </p>
+            </section>
+            <section class="space-hire-text" id="book-space-form">
+                <form method="post" action="/hire-enquiry">
+                    <div class="container">
+                        <fieldset>
+                            <legend>Contact Hackney Wick Underground</legend>
+
+                            <div class="group-input">
+                                <label for="artistName">Your name:</label>
+                                <input type="text" name="artistName" id="artistName" required>
+                            </div>
+
+                            <div class="group-input">
+                                <label for="companyName">Your company name (if applicable):</label>
+                                <input type="text" name="companyName" id="companyName">
+                            </div>
+
+                            <div class="group-input">
+                                <label for="phone">Phone number:</label>
+                                <input type="text" name="phone" id="phone" required>
+                            </div>
+
+                            <div class="group-input">
+                                <label for="email">Email address:</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+
+                            <div class="group-input">
+                                <label for="description">What would you like to say?:</label><br>
+                                <textarea name="description" id="description" rows="10" cols="30" required>
+                                </textarea>
+                            </div>
+
+                            <button type="submit"> Send message to the team </button>
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+
+
+
+
+            <!-- <%- include('./sections/whatson.ejs') %> -->
+            <section class="pre-footer">
+
+            </section>
+            <footer>
+                <span> Hackney Wick Underground</span>
+            </footer>
+    </div>
+
+
+</body>
+
+</html>

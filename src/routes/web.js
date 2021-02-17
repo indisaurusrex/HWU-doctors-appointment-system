@@ -24,8 +24,10 @@ let initAllWebRoutes = (app) => {
     // router.get("/all-spaces/:id", homepageController.getSpaceById);
     router.get("/hire-enquiry", authController.checkLoggedIn, homepageController.getHireEnquiryPage);
     router.get("/about-us", homepageController.getAboutUs);
+    router.get("/contact-us", homepageController.getContactUs);
 
     router.post("/hire-enquiry", homepageController.postEnquiry);
+    router.post("/contact-us", homepageController.postContactUs);
 
     
     router.post("/register", auth.validateRegister, homepageController.handleRegister);

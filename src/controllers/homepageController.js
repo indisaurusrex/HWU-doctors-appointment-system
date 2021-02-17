@@ -145,7 +145,7 @@ let postEnquiry = async (req, res) => {
             type: "studio hire",
             createdAt: Date.now()
         };
-        await enquiryService.createHireEnquiry(hireEnquiry);
+        await enquiryService.createEnquiry(hireEnquiry);
         return res.redirect("/");
     } catch (error) {
         // showing the error message on console
@@ -171,6 +171,31 @@ let getAboutUs = (req, res) => {
     return res.render("about-us.ejs");
 }
 
+let getContactUs = (req, res) => {
+    return res.render("contact-us.ejs");
+}
+
+let postContactUs = async (req, res) => {
+    try {
+        let generalEnquiry = {
+            artistName: req.body.artistName,
+            companyName: req.body.companyName,
+            phone: req.body.phone,
+            email: req.body.email,
+            description: req.body.description,
+            type: "general enquiry",
+            createdAt: Date.now()
+        };
+        await enquiryService.createEnquiry(generalEnquiry);
+        return res.redirect("/");
+    } catch (error) {
+        // showing the error message on console
+        console.log(error);
+        // req.flash("errors", error);
+        return res.render("contact-us.ejs");
+    }
+}
+
 module.exports = {
     getHomepage: getHomepage,
     getRegisterPage: getRegisterPage,
@@ -182,5 +207,7 @@ module.exports = {
     // getSpaceById: getSpaceById,
     getAboutUs: getAboutUs,
     getHireEnquiryPage: getHireEnquiryPage,
-    postEnquiry: postEnquiry
+    postEnquiry: postEnquiry,
+    getContactUs: getContactUs,
+    postContactUs: postContactUs
 };
