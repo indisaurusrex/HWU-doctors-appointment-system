@@ -1,5 +1,6 @@
 import userService from "../services/userService";
 import homeService from "../services/homeService";
+import enquiryService from "../services/enquiryService";
 import { validationResult } from "express-validator";
 
 
@@ -105,6 +106,56 @@ let getHireEnquiryPage = (req, res) => {
     return res.render("spaces/singlespace.ejs");
 }
 
+let postEnquiry = async (req, res) => {
+    // keep user data if an error occurs
+    // let form = {
+    //     artistName: req.body.artistName,
+    //     companyName: req.body.companyName,
+    //     phone: req.body.phone,
+    //     email: req.body.email,
+    //     description: req.body.description,
+    //     start: req.body.start,
+    //     hireLength: req.body.hireLength
+    // }
+    // validate input fields
+    // create an empty array to save validation errors
+    // let errorsArr = [];
+    // let validationError = validationResult(req);
+    // if (!validationError.isEmpty()) {
+    //     let errors = Object.values(validationError.mapped());
+    //     errors.forEach((item) => {
+    //         errorsArr.push(item.msg);
+    //     });
+    //     req.flash("errors", errorsArr)
+    //     return res.render("spaces/singlespace.ejs", {
+    //         errors: req.flash("errors"),
+    //         form: form
+    //     });
+    // }
+    // create a new user
+    try {
+        let hireEnquiry = {
+            artistName: req.body.artistName,
+            companyName: req.body.companyName,
+            phone: req.body.phone,
+            email: req.body.email,
+            description: req.body.description,
+            start: req.body.start,
+            hireLength: req.body.hireLength,
+            type: "studio hire",
+            createdAt: Date.now()
+        };
+        await enquiryService.createHireEnquiry(hireEnquiry);
+        return res.redirect("/");
+    } catch (error) {
+        // showing the error message on console
+        console.log(error);
+        // req.flash("errors", error);
+        return res.render("spaces/singlespace.ejs");
+    }
+
+};
+
 // let getSpaceById = async (req, res) => {
 //     try {
 //         let desk = await homeService.findSpaceById(req.params.id);
@@ -130,5 +181,6 @@ module.exports = {
     // getAllSpacesPage: getAllSpacesPage,
     // getSpaceById: getSpaceById,
     getAboutUs: getAboutUs,
-    getHireEnquiryPage: getHireEnquiryPage
+    getHireEnquiryPage: getHireEnquiryPage,
+    postEnquiry: postEnquiry
 };

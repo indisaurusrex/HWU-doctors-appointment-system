@@ -34,18 +34,66 @@
                 We'll let you know which spaces might suit your needs and confirm your booking via email.
             </p>
         </section>
-        <section id="book-space-form">
-            <h2>fill in info from user sign up</h2>
-            <h3>show available month</h3>
-            <h3>this space is available from now until date</h3>
-            <h3>how long would you like to rent it for?</h3>
-            <input type="text" placeholder="Tell us about what you'll use the space for">
+        <section class="space-hire-text" id="book-space-form">
+            <form method="post" action="/hire-enquiry">
+                <div class="container">
+                    <fieldset>
+                        <legend>Enquire about hiring a studio space</legend>
+            
+                        <div class="group-input">
+                            <label for="artistName">Your name:</label>
+                            <input type="text" name="artistName" id="artistName" required>
+                        </div>
+            
+                        <div class="group-input">
+                            <label for="companyName">Your company name (if applicable):</label>
+                            <input type="text" name="companyName" id="companyName">
+                        </div>
+
+                        <div class="group-input">
+                            <label for="phone">Phone number:</label>
+                            <input type="text" name="phone" id="phone" required>
+                        </div>
+            
+                        <div class="group-input">
+                            <label for="email">Email address:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+
+                        <div class="group-input">
+                            <label for="description">Tell us a bit more about you and what you'll be using the space for:</label><br>
+                            <textarea name="description" id="description" rows="10" cols="30" required>
+                                </textarea>
+                        </div>
+            
+                        <div class="group-input">
+                            <label for="start">When would you like to move in?:</label>
+                            <select id="start" name="start" required>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="later">Later than May</option>
+                                <option value="unsure">Unsure at the moment</option>
+                            </select>
+                        </div>
+            
+                        <div class="group-input">
+                            <label for="hireLength">How long do you think you'll stay?:</label>
+                            <input type="text" name="hireLength" id="hireLength" required>
+                        </div>
+                        <button type="submit"> Send enquiry to the team </button>
+                    </fieldset>
+                </div>
+            </form>
         </section>
 
 
 
 
         <!-- <%- include('../sections/whatson.ejs') %> -->
+        <section class="pre-footer">
+
+        </section>
         <footer>
             <span> Hackney Wick Underground</span>
         </footer>

@@ -25,6 +25,8 @@ let initAllWebRoutes = (app) => {
     router.get("/hire-enquiry", authController.checkLoggedIn, homepageController.getHireEnquiryPage);
     router.get("/about-us", homepageController.getAboutUs);
 
+    router.post("/hire-enquiry", homepageController.postEnquiry);
+
     
     router.post("/register", auth.validateRegister, homepageController.handleRegister);
     router.post("/login", passport.authenticate("local", {
