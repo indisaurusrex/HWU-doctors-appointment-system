@@ -76,7 +76,7 @@ let getAdminPage = async (req, res) => {
         let bookings = await homeService.getBookings();
         let users = await homeService.getUsers();
         let desks = await homeService.getDesks();
-        return res.render("users/main.ejs", {
+        return res.render("admin/main.ejs", {
             bookings: bookings,
             users: users,
             desks: desks
@@ -84,11 +84,11 @@ let getAdminPage = async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-    // return res.render("users/main.ejs");
+    // return res.render("admin/main.ejs");
 };
 
 let getAllUsersPage = (req, res) => {
-    return res.render("users/manageUsers.ejs");
+    return res.render("admin/manageUsers.ejs");
 }
 
 // let getAllSpacesPage = async (req, res) => {

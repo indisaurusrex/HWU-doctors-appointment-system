@@ -150,7 +150,7 @@ var getAdminPage = function () {
 
                     case 9:
                         desks = _context2.sent;
-                        return _context2.abrupt("return", res.render("users/main.ejs", {
+                        return _context2.abrupt("return", res.render("admin/main.ejs", {
                             bookings: bookings,
                             users: users,
                             desks: desks
@@ -176,7 +176,7 @@ var getAdminPage = function () {
 }();
 
 var getAllUsersPage = function getAllUsersPage(req, res) {
-    return res.render("users/manageUsers.ejs");
+    return res.render("admin/manageUsers.ejs");
 };
 
 module.exports = {
