@@ -31,7 +31,8 @@
 </style>
 
 <body>
-    <div class="container">
+    <div id="wrap">
+    <div class="container" id="main">
         <%- include('sections/topnav.ejs') %>
         <section class="header">
             <div class="title">
@@ -43,14 +44,12 @@
                 <p>placeholder for feature section</p>
             </div>
         </section>
-
-        <!-- <%- include('sections/whatson.ejs') %> -->
-        <footer>
-            <span> Hackney Wick Underground</span>
-        </footer>
+        
+        <section class="pre-footer"></section>
+        
     </div>
-    
-
+    </div>
+<%- include('sections/footer.ejs') %>
 </body>
 
 </html>

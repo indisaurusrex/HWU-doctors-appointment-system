@@ -18,8 +18,8 @@
 </head>
 
 <body>
-
-    <div class="container">
+    <div id="wrap">
+    <div class="container" id="main">
         <%- include('./sections/topnav.ejs') %>
 
             <section class="header">
@@ -72,20 +72,10 @@
                     </div>
                 </form>
             </section>
-
-
-
-
-            <!-- <%- include('./sections/whatson.ejs') %> -->
-            <section class="pre-footer">
-
-            </section>
-            <footer>
-                <span> Hackney Wick Underground</span>
-            </footer>
+            <section class="pre-footer"></section>
+        </div>
     </div>
-
-
+    <%- include('sections/footer') %>
 </body>
 
 </html>

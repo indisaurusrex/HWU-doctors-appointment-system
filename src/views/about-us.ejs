@@ -25,7 +25,8 @@
 </style>
 
 <body>
-    <div class="container">
+    <div id="wrap">
+    <div class="container" id="main">
         <%- include('sections/topnav.ejs') %>
         <div>
             <h1 style="font-size:10vw">Hello,</h1>
@@ -93,25 +94,15 @@
                     href="https://civicstate.co.uk/">civicstate.co.uk</a>
             </p>
         </div>
-        <div class="container">
-            <h4 style="font-size:4vw">Our partnerships</h4>
-        </div>
-        <div class="container">
-            <p style="font-size:3vw">
-                Innovative and broad partnerships include those of Queen Mary University, Innovate UK, Loughborough University,
-                University College London, London Metropolitan, London School of Economics and many more.
-            </p>
-        </div>
+        
             
             <section class="pre-footer">
             </section>
             
-            <footer>
-                <span> Hackney Wick Underground</span>
-            </footer>
+            
     </div>
-
-
+</div>
+<%- include('sections/footer.ejs') %>
 </body>
 
 </html>

@@ -198,6 +198,14 @@ let postContactUs = async (req, res) => {
     }
 }
 
+let getBlog = (req, res) => {
+    return res.render("blog.ejs");
+}
+
+let getPartnerships = (req, res) => {
+    return res.render("partnerships.ejs");
+}
+
 module.exports = {
     getHomepage: getHomepage,
     getRegisterPage: getRegisterPage,
@@ -211,5 +219,7 @@ module.exports = {
     getHireEnquiryPage: getHireEnquiryPage,
     postEnquiry: postEnquiry,
     getContactUs: getContactUs,
-    postContactUs: postContactUs
+    postContactUs: postContactUs,
+    getBlog: getBlog,
+    getPartnerships: getPartnerships
 };

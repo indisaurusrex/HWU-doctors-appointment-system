@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Partnerships</title>
+    <!-- Load font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<style>
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div class="container" id="main">
+            <%- include('sections/topnav.ejs') %>
+                <section class="header">
+                    <div class="title">
+                        Partnerships
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <p style="font-size:3vw">
+                            Innovative and broad partnerships include those of Queen Mary University, Innovate UK, Loughborough University,
+                            University College London, London Metropolitan, London School of Economics and many more.
+                        </p>
+                    </div>
+                </section>
+                <section class="pre-footer">
+                </section>
+        </div>
+    </div>
+<%- include('sections/footer.ejs') %>
+</body>
+
+</html>

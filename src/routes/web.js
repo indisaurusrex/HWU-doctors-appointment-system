@@ -37,6 +37,8 @@ let initAllWebRoutes = (app) => {
     router.get("/hire-enquiry", homepageController.getHireEnquiryPage);
     router.get("/about-us", homepageController.getAboutUs);
     router.get("/contact-us", homepageController.getContactUs);
+    router.get("/blog", homepageController.getBlog);
+    router.get("/partnerships", homepageController.getPartnerships);
 
     router.post("/hire-enquiry", homepageController.postEnquiry);
     router.post("/contact-us", homepageController.postContactUs);
