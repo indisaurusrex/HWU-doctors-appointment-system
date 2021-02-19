@@ -111,12 +111,12 @@
                     </div>
                     <!-- /.row -->
 
-                    <!-- /.row -->
+                    <!-- studio hire enquiries table /.row -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Responsive Hover Table</h3>
+                                    <h3 class="card-title">Studio Hire Enquiries</h3>
 
                                     <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -126,6 +126,108 @@
                                             <div class="input-group-append">
                                                 <button type="submit" class="btn btn-default"><i
                                                         class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body table-responsive p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Date/time</th>
+                                                <th>Name</th>
+                                                <th>Company</th>
+                                                <th>Start</th>
+                                                <th>Length</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% enquiries.forEach(function(enquiry) { %>
+                                                <% if (enquiry.start) { %>
+                                            <tr>
+                                                    <td><%= enquiry.id %></td>
+                                                    <td>
+                                                        <%= enquiry.createdAt.toString() %>
+                                                    </td>
+                                                    <td><%= enquiry.artistName %></td>
+                                                    <td><%= enquiry.companyName %></td>
+                                                    <td><%= enquiry.start %></td>
+                                                    <td><%= enquiry.hireLength %></td>
+                                                    <td><%= enquiry.description %></td>
+                                            </tr>
+                                            <% } })%>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                    <!-- general enquiries table /.row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">General 'Contact Us' Enquiries</h3>
+                    
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                    
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body table-responsive p-0">
+                                    <table class="table table-hover text-nowrap">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Date/time</th>
+                                                <th>Name</th>
+                                                <th>Company</th>
+                                                <th>Enquiry</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% enquiries.forEach(function(enquiry) { %>
+                                            <% if (!enquiry.start) { %>
+                                                <tr>
+                                                    <td><%= enquiry.id %></td>
+                                                    <td><%= enquiry.createdAt.toString() %></td>
+                                                    <td><%= enquiry.artistName %></td>
+                                                    <td><%= enquiry.companyName %></td>
+                                                    <td><%= enquiry.description %></td>
+                                                </tr>
+                                            <% }}) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                    </div>
+                    <!-- bookings table /.row -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Bookings</h3>
+                    
+                                    <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                    
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -146,26 +248,37 @@
                                         </thead>
                                         <tbody>
                                             <% bookings.forEach(function(booking) { %>
-                                            <tr>
-                                                <td><%= booking.id %></td>
-                                                <td>
-                                                    <% desks.forEach(function(desk) { %>
-                                                        <% if (desk.id===booking.deskid) {%>
-                                                            <%= desk.name %>
-                                                                <% }}) %>
-                                                </td>
-                                                <td><% users.forEach(function(user) { %>
-                                                    <% if (user.id === booking.userid) {%>
-                                                    <%= user.firstName %>
-                                                    <% }}) %>
-                                                </td>
-                                                <td><%= booking.start.toDateString() %></td>
-                                                <td><%= booking.end.toDateString() %></td>
-                                                <td><%= booking.status %></td>
-                                                <td><%= booking.paid %></td>
-                                            </tr>
-                                            
-                                            <% }) %>
+                                                <tr>
+                                                    <td>
+                                                        <%= booking.id %>
+                                                    </td>
+                                                    <td>
+                                                        <% desks.forEach(function(desk) { %>
+                                                            <% if (desk.id===booking.deskid) {%>
+                                                                <%= desk.name %>
+                                                                    <% }}) %>
+                                                    </td>
+                                                    <td>
+                                                        <% users.forEach(function(user) { %>
+                                                            <% if (user.id===booking.userid) {%>
+                                                                <%= user.firstName %>
+                                                                    <% }}) %>
+                                                    </td>
+                                                    <td>
+                                                        <%= booking.start.toDateString() %>
+                                                    </td>
+                                                    <td>
+                                                        <%= booking.end.toDateString() %>
+                                                    </td>
+                                                    <td>
+                                                        <%= booking.status %>
+                                                    </td>
+                                                    <td>
+                                                        <%= booking.paid %>
+                                                    </td>
+                                                </tr>
+                    
+                                                <% }) %>
                                         </tbody>
                                     </table>
                                 </div>
@@ -174,7 +287,6 @@
                             <!-- /.card -->
                         </div>
                     </div>
-                    <!-- /.row -->
                 </div><!-- /.container-fluid -->
             </section>
             <!-- /.content -->

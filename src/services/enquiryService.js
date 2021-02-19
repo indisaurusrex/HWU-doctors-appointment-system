@@ -13,6 +13,18 @@ let createEnquiry = (enquiry) => {
     });
 };
 
+let getEnquiries = () => {
+    return new Promise((async (resolve, reject) => {
+        try {
+            let enquiries = await db.Enquiry.findAll();
+            resolve(enquiries);
+        } catch (e) {
+            reject(e);
+        }
+    }));
+};
+
 module.exports = {
-    createEnquiry: createEnquiry
+    createEnquiry: createEnquiry,
+    getEnquiries: getEnquiries
 };

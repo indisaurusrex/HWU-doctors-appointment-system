@@ -37,6 +37,17 @@ let getDesks = () => {
     }));
 };
 
+let getEnquiries = () => {
+    return new Promise((async (resolve, reject) => {
+        try {
+            let enquiries = await db.Enquiry.findAll();
+            resolve(enquiries);
+        } catch (e) {
+            reject(e);
+        }
+    }));
+};
+
 let findSpaceById = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -56,5 +67,6 @@ module.exports = {
     getBookings: getBookings,
     getUsers: getUsers,
     getDesks: getDesks,
+    getEnquiries: getEnquiries,
     findSpaceById: findSpaceById
 };

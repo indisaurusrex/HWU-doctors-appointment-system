@@ -76,10 +76,12 @@ let getAdminPage = async (req, res) => {
         let bookings = await homeService.getBookings();
         let users = await homeService.getUsers();
         let desks = await homeService.getDesks();
+        let enquiries = await homeService.getEnquiries();
         return res.render("admin/main.ejs", {
             bookings: bookings,
             users: users,
-            desks: desks
+            desks: desks,
+            enquiries: enquiries
         });
     } catch (error) {
         console.log(error);
