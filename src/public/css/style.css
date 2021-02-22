@@ -137,11 +137,15 @@ body {
   font-family: 'Poppins', sans-serif; }
   body a {
     text-decoration: none; }
+
+    h1 {
+        font-family: 'trashhandregular';
+    }
   
 .top-nav .wrapper h1 {
 text-align: center;
 font-size: 30px;
-font-family: 'Poppins';
+font-family: 'trashhandregular';
 text-transform: uppercase;
 }
 .top-nav .img-area {
@@ -176,10 +180,8 @@ transition: .9s;
   margin: 0 30px; }
 
 .header {
-  height: 100px;}
+font-family: 'trashhandregular';}
   .header .title {
-      height: 50px;
-      font-size: 35px;
       margin: 10px 0;
       display: flex;
       flex-direction: column;
