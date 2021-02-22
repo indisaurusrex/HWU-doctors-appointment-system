@@ -1,18 +1,18 @@
 {
-  "name": "my-doctor-care",
+  "name": "hackney-wick-underground",
   "version": "1.0.0",
-  "description": "Doctor appointment booking system",
-  "main": "server.js",
+  "description": "Hackney Wick Underground Website",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
     "start": "nodemon --exec babel-node src/server.js"
   },
   "keywords": [
-    "doctor",
-    "appointment",
-    "booking",
-    "system"
+    "hackney wick",
+    "artist",
+    "studios",
+    "makers"
   ],
   "author": "India",
   "license": "ISC",
