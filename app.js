@@ -62,7 +62,7 @@ app.use(_passport2.default.session());
 //init all web routes
 (0, _web2.default)(app);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 app.listen(port, function () {
     console.log("App is running at the port " + port);
