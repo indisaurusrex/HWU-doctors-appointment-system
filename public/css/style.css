@@ -296,4 +296,5 @@ footer {
 .space-imgs {
     display: block;
     min-width: 100%;
+    margin-top: 10px;
 }
