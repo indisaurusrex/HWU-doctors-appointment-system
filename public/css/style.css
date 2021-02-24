@@ -263,7 +263,7 @@ footer {
 }
 
 .img-wrap {
-  width: 33.3%;
+  width: 100%;
   position: relative;
   display: inline-block;
   overflow: auto;
