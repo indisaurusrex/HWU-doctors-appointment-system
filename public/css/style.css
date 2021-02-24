@@ -45,7 +45,7 @@
   padding: 15px;
 }
 img {
-    width: auto;
+    object-fit: contain;
 }
 html {
   font-family: "Poppins", sans-serif;
