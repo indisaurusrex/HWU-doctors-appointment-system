@@ -195,6 +195,19 @@ font-family: 'trashhandregular';}
       margin: 0;
   }
  
+.most-stuff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.wide-stuff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .homepage-feature {
     display: flex;
     flex-direction: column;
