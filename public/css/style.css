@@ -288,7 +288,7 @@ footer {
   margin: 0;
 }
 
-div > img {
+.img-wrap img {
   display: block;
   max-width: 100%;
 }
