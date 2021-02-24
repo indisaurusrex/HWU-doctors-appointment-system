@@ -271,6 +271,6 @@ footer {
 
 div > img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
 }
   
