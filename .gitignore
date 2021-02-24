@@ -4,3 +4,4 @@
 .idea/
 .env
 /src/config/config.json
+private_key.txt

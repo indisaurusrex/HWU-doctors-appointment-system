@@ -20,7 +20,27 @@
 <body>
     <div id="wrap">
         <div class="container" id="main">
-            <%- include('../sections/topnav.ejs') %>
+            <div class="top-nav">
+                <div class="wrapper">
+                    <div class="img-area">
+                        <div class="single-img">
+                            <p><a href="/">Home</a></p>
+                        </div>
+                        <div class="single-img">
+                            <p><a href="/about.html">About us</a></p>
+                        </div>
+                        <div class="single-img">
+                            <p><a href="/spaces.html">Spaces</a></p>
+                        </div>
+                        <div class="single-img">
+                            <p><a href="/contact.html">Contact us</a></p>
+                        </div>
+                        <div class="single-img">
+                            <p><a href="/partnerships">Partnerships</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <section class="header">
                     <div class="title">
                         <h1 style="font-size:10vw">Spaces</h1>
@@ -129,7 +149,22 @@ is something highly requested by the community.
                 <section class="pre-footer"></section>
         </div>
     </div>
-    <%- include('../sections/footer') %>
+    <div id="footer">
+        <div class="row">
+            <div class="col-9 left">
+                <span style="text-align: left;">Hackney Wick Underground 2021</span>
+            </div>
+            <div class="col-1">
+                <a href="/users">Admin</a>
+            </div>
+            <div class="col-1">
+                <a href="/login">Login</a>
+            </div>
+            <div class="col-1">
+                <a href="/log-out">Logout</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
