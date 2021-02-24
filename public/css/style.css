@@ -263,7 +263,6 @@ footer {
   }
 
 .responsive {
-  max-width: 300px;
-  margin: 3rem auto;
+  width: 10rem;
   padding: 0 2rem;
 }
