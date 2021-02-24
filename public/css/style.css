@@ -290,5 +290,10 @@ footer {
 
 div > img {
   display: block;
-  min-width: 100%;
+  max-width: 100%;
+}
+
+.space-imgs {
+    display: block;
+    min-width: 100%;
 }
