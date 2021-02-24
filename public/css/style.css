@@ -200,12 +200,14 @@ font-family: 'trashhandregular';}
     flex-direction: column;
     align-items: center;
     width: 80%;
+    margin: auto;
 }
 .wide-stuff {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: auto;
 }
 
 .homepage-feature {
