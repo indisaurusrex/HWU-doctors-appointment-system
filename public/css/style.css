@@ -195,11 +195,7 @@ font-family: 'trashhandregular';}
     align-items: center;
 }
 .homepage-feature .placeholder {
-    width: 60%;
-    height: 500px;
-    border-radius: 3px;
-    border-style: groove;
-    border-color: gray;
+    width: 90%;
     padding: 30px;
 }
 
