@@ -130,7 +130,7 @@ body {
 body {
   padding: 0;
   margin: 0;
-  background: url('../images/birchplywood.jpg');
+  background: url('/birchplywood.jpg');
   background-color: tan;
   width: 100%;
   background-repeat: repeat-y;
@@ -237,79 +237,8 @@ font-family: 'trashhandregular';}
           color: black; }
           .events .title-section .btn-view a span:hover {
             color: white; }
-  .events .slide {
-    height: 300px; }
-    .events .slide .my-slick-slide {
-      height: 100%;
-      width: 100%; }
-      .events .slide .my-slick-slide .div-slide {
-        display: flex;
-        flex-direction: column;
-        padding-right: 10px; }
-        .events .slide .my-slick-slide .div-slide .image-slide {
-          height: 200px;
-          background-image: url("../images/speciality/speciality1.jpg");
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: 325px 200px; }
-        .events .slide .my-slick-slide .div-slide .div-title {
-          background-color: #f5efef; }
-          .events .slide .my-slick-slide .div-slide .div-title span {
-            display: block;
-            text-transform: uppercase;
-            font-size: 20px;
-            padding: 15px; }
-    .events .slide .arrow-left {
-      border: 1px solid #ccc;
-      font-size: 30px;
-      padding: 15px;
-      color: #ccc;
-      position: absolute;
-      bottom: 50%;
-      left: -15px;
-      background-color: white;
-      z-index: 1000;
-      cursor: pointer; }
-    .events .slide .arrow-right {
-      border: 1px solid #ccc;
-      font-size: 30px;
-      padding: 15px;
-      color: #ccc;
-      position: absolute;
-      bottom: 50%;
-      right: -15px;
-      background-color: white;
-      cursor: pointer; }
-
-.events .slide .my-slick-slide .div-slide {
-  display: flex;
-  flex-direction: column;
-  background-color: #e8e8e8;
-  margin-right: 10px;
-  cursor: pointer; }
-  .events .slide .my-slick-slide .div-slide:hover {
-    background-color: #f1ee90; }
-  .events .slide .my-slick-slide .div-slide img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    padding: 10px 0; }
-  .events .slide .my-slick-slide .div-slide .info-doctor {
-    text-align: center; }
-    .events .slide .my-slick-slide .div-slide .info-doctor .title {
-      display: block;
-      font-weight: 600;
-      padding-top: 5px; }
-    .events .slide .my-slick-slide .div-slide .info-doctor .short-desc {
-      display: block;
-      padding-top: 5px; }
-  .events .slide .my-slick-slide .div-slide .location {
-    text-align: center;
-    color: #59c1a9;
-    margin-top: 30px;
-    margin-bottom: 5px; }
-
+  
+    
 
 
 .contact {
