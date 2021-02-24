@@ -199,12 +199,10 @@ font-family: 'trashhandregular';}
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
 }
 .homepage-feature .placeholder {
     width: 90%;
     padding: 30px;
-    margin: auto;
 }
 
 .about-us {
