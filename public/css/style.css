@@ -44,7 +44,9 @@
   float: left;
   padding: 15px;
 }
-
+img {
+    width: auto;
+}
 html {
   font-family: "Poppins", sans-serif;
 }
