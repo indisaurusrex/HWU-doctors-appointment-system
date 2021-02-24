@@ -263,7 +263,7 @@ footer {
 }
 
 .img-wrap {
-  width: 100%;
+  width: 33.3%;
   position: relative;
   display: inline-block;
   overflow: auto;
@@ -274,6 +274,5 @@ div > img {
   display: block;
   position: absolute;
   max-width: 100%;
-
 }
   
