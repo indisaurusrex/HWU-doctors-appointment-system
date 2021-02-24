@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <!-- Load font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/css1/style.css">
+
+    <!-- Load Jquery, Slick slider-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js1/slick-slide.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <link rel="stylesheet" href="css1/trashhand_regular/stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+
+<style>
+    .for-users {
+        border-radius: 3px;
+        position: absolute;
+        border: 1px solid #d8d8d8;
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        padding: 5px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div class="container" id="main">
+            <%- include('sections/topnav.ejs') %>
+                <section class="header">
+                    <div class="title">
+                        Hackney Wick Underground
+                    </div>
+                </section>
+                <section class="homepage-feature">
+                    <div class="placeholder">
+                        <p>placeholder for feature section</p>
+                    </div>
+                </section>
+
+                <section class="pre-footer"></section>
+
+        </div>
+    </div>
+    <%- include('sections/footer.ejs') %>
+</body>
+
+</html>
